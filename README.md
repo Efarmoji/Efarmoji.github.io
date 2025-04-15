@@ -21,9 +21,12 @@ Efarmoji is a web application built for English learners in Japan to collect, ma
 - Deployment: Heroku
 
 
-# Scrape
+# Scraping codes
+## Scrape directory
+## About
+This directory contains practice and implementation of scraping. 
 
-
+## Features
 
 ## Author
 Built by Efarmoji
