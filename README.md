@@ -22,5 +22,5 @@ Efarmoji is a web application built for English learners in Japan to collect, ma
 
 ## Author
 Built by Efarmoji
-Contact -> [efarmogig@gmail.com]
+ : Contact -> [efarmogig@gmail.com]
 
