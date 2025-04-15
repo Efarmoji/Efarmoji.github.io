@@ -1,0 +1,121 @@
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: linear-gradient(60deg, #a8b7c9 0%, #485563 100%);
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: linear-gradient(to bottom, rgba(42, 45, 76, 0.825), rgb(0, 0, 0));
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    letter-spacing: -0.2px;
+    word-spacing: -0.8px;
+    font-weight: 700;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: normal;
+    font-variant: normal;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    font-family: Georgia, serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    background: rgba(37, 36, 43, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    width: 450px;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+p{
+    margin: 5px;
+    border: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+form input, form button {
+    width: 90%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: none;
+    margin: 8px 0;
+    background: linear-gradient(to right, #290a8eb2, #000000);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-position 0.5s, box-shadow 0.3s;
+    background-size: 200%;
+}
+
+form input:focus, form button:focus {
+    outline: none;
+}
+
+form button {
+    background-color: #290a8eb2;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+form button:hover {
+    background-position: right center;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+.btn {
+    background-image: linear-gradient(to right, #290a8eb2, #000000);
+    padding: 10px 20px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    transition: background-position 0.5s, box-shadow 0.3s;
+    background-size: 200%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn:hover {
+    background-position: right center;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+form input, form textarea, form select {
+    font-family: Georgia, serif;
+    font-size: 14px;             
+    color: white;               
+    background: transparent;      
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+form input::placeholder, form textarea::placeholder {
+    color: #ddd;                 
+    font-style: italic;
+}

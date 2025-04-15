@@ -1,0 +1,228 @@
+html{
+  margin:0;
+  padding:0;
+  height: 100%;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+}
+
+body{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: linear-gradient(to bottom,rgba(2, 4, 21, 0.825),rgb(0, 0, 0));
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+}
+
+header{
+justify-self: center;
+height: 10%;
+width: 95%;
+display: flex;
+justify-content: space-around;
+border: 1px solid black;
+border-radius: 15px;
+background:rgba(255,255,255,0.05);
+backdrop-filter: blur(10px);
+box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+}
+
+.header-btn{
+align-self: center;
+justify-self: center;
+}
+
+main{
+height: 90%;
+width: 100%;
+display: flex;
+justify-content: space-between;
+}
+
+.form-box{
+height: 100%;
+width: 20%;
+padding-left: 15px;
+padding-top: 5px;
+}
+form{
+font-family: Georgia, serif;
+font-size: 15px;
+letter-spacing: -0.2px;
+word-spacing: -0.8px;
+color: white;
+font-weight: 700;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: normal;
+font-variant: normal;
+text-transform: capitalize;
+}
+
+.right-box{
+height: 100%;
+width: 80%;
+}
+
+.h2{
+width: 200px;
+height: 40px;
+}
+
+.flash-box{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+
+
+.F-box{
+text-align: center;
+white-space: nowrap;
+text-overflow: ellipsis;
+width: 130px;
+height: 130px;
+margin: 5px;
+background: rgba(12, 1, 1, 0.3);
+backdrop-filter: blur(1px);
+border-radius: 5px;
+padding: 20px;
+max-width: 400px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+border: 1px solid rgba(255, 255, 255, 0.3);
+transition: transform 0.3s,box-shadow 0.3s;
+z-index: 1;
+}
+.F-box:hover{
+transform: scale(1.2);
+box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.font{
+align-self: center;
+font-family: Georgia, serif;
+font-size: 20px;
+letter-spacing: -0.2px;
+word-spacing: -0.8px;
+color: white;
+font-weight: 700;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: normal;
+font-variant: normal;
+text-transform: capitalize;
+}
+
+.Fname{
+padding-bottom: 70px;
+padding-top: 40px;
+width: 100%;
+
+}
+
+.dropdown {
+position: relative;
+display: flex;
+justify-self: end;
+}
+
+.select-btn {
+background-color: #333;
+color: white;
+border: none;
+padding: 6px 10px;
+font-size: 10px;
+cursor: pointer;
+border-radius: 10px;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: rgba(20, 20, 20, 0.5);
+min-width: 160px;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+border-radius: 4px;
+z-index: 10;
+}
+
+.dropdown-content a {
+color: white;
+padding: 10px 15px;
+text-decoration: none;
+display: block;
+font-size: 14px;
+}
+
+.dropdown-content.right-align{
+right: 0;
+}
+
+.dropdown-content a:hover {
+background-color: #000000;
+font-family: Georgia, serif;
+font-size: 15px;
+letter-spacing: -0.2px;
+word-spacing: -0.8px;
+color: whitesmoke;
+font-weight: 700;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: normal;
+font-variant: normal;
+text-transform: capitalize;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+font-family: Georgia, serif;
+font-size: 15px;
+letter-spacing: -0.2px;
+word-spacing: -0.8px;
+color: whitesmoke;
+font-weight: 700;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: normal;
+font-variant: normal;
+text-transform: capitalize;
+}
+
+
+
+.btn-grad{
+margin: 5px;
+background-image: linear-gradient(to right,#b2bdd4,#958aa0);
+padding: 10px 20px;
+font-size: 15px;
+font-weight:bold;
+transition: background-position 0.5s,box-shadow 0.5s;
+background-size: 200% auto;
+border: none;
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+cursor: pointer;
+outline: none;
+}
+
+
+.btn-grad:hover{
+background-position: right center;
+box-shadow: 0 8px 12px grba(0,0,0,0.4);
+}
+
+.btn-font{
+font-family: Georgia, serif;
+font-size: 15px;
+letter-spacing: -0.2px;
+word-spacing: -0.8px;
+color: whitesmoke;
+font-weight: 700;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: normal;
+font-variant: normal;
+text-transform: capitalize;
+}

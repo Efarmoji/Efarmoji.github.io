@@ -1,0 +1,92 @@
+html{
+    margin:0;
+    padding:0;
+    height: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  }
+  
+  body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: linear-gradient(to bottom,rgba(2, 4, 21, 0.825),rgb(0, 0, 0));
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+  }
+
+h2{
+    text-align: center;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    background-image: linear-gradient(to right,#290a8eb2,#000000);
+    padding: 1px 24px;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    transition: background-position 0.5s,box-shadow 0.3;
+    background-size: 200%;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 8px;
+    outline: none;
+}
+.box:hover{
+    background-position: right center;
+    box-shadow: 0 8px 12px rgba(0,0,0,0.4);
+}
+
+.href{
+    padding: 20px;
+}
+
+.href:hover{
+    color: gray;
+}
+
+.font{
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 50px;
+    letter-spacing: -0.2px;
+    word-spacing: -0.8px;
+    font-weight: 700;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: normal;
+    font-variant: normal;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.btn{
+    background-image: linear-gradient(to right,#290a8eb2,#000000);
+    padding: 12px 24px;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    transition: background-position 0.5s,box-shadow 0.3;
+    background-size: 200%;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 8px;
+    cursor: pointer;
+    outline: none;
+}
+.btn:hover{
+    background-position: right center;
+    box-shadow: 0 8px 12px rgba(0,0,0,0.4);
+}
