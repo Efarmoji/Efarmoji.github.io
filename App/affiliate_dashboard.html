@@ -1,0 +1,15 @@
+<!-- affiliate_dashboard.html -->
+
+<!--Unique Codes: Ensure each affiliate code is unique.
+Limit Referrals: Add logic to limit the number of self-referrals or suspicious referral patterns.
+Prevent Abuse: Add rate limiting or CAPTCHA to the registration page to prevent automated fake sign-ups.-->
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Your Affiliate Dashboard</h1>
+    <p>Share your referral link:</p>
+    <p><a href="{{ referral_link }}" target="_blank">{{ referral_link }}</a></p>
+
+    <p>You have referred {{ referrals_count }} users so far.</p>
+{% endblock %}

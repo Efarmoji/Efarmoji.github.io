@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="{% static 'css/def.css' %}">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2451784812620510"
+    crossorigin="anonymous"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9TD5W9M3LF"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9TD5W9M3LF');
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h2>Add a Word</h2>
+            <form method="post" class="form">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn-grad">Submit</button>
+            </form>
+        </div>    
+        <div class="header-right">
+            {% if user.is_authenticated %}
+                <p>Welcome, {{ user.username }}! <a href="{% url 'logout' %}"><button class="btn-grad">Logout</button></a></p>
+            {% else %}
+                <p><a href="{% url 'login' %}">Login</a> | <a href="{% url 'signup' %}">Sign Up</a></p>
+            {% endif %}
+            <p>Back to Flashcards Page: <a href="{% url 'manage_flashcards' %}"><button class="btn-grad">Back</button></a></p>
+            <p>Test those words: <a href="{% url 'test' flash.id %}"><button class="btn-grad">Test</button></a></p>
+        </div>
+    </header>
+    
+    <main>
+        <h2>Your Words of {{ flash.flash_name }}</h2>
+        <div class="input-box">
+            <label for="checkbox-definitions">
+                <input type="checkbox" id="checkbox-definitions"> Invisible: Definitions
+            </label>
+            <label for="checkbox-translations">
+                <input type="checkbox" id="checkbox-translations"> Invisible: Translations
+            </label>
+        </div>
+        
+
+        <div class="sort-controls">
+            <span>Sort by: </span>
+            <a href="?sort=date&page={{ page_obj.number }}">Date</a> |
+            <a href="?sort=alpha&page={{ page_obj.number }}">Alphabetical</a>
+        </div>
+    
+        {% if page_obj.object_list %}
+            <table class="partitioned-table">
+                <thead>
+                    <tr class="partition">
+                        <th>No.</th>
+                        <th>Word</th>
+                        <th>Definitions</th>
+                        <th>Translations</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for word in page_obj %}
+                        <tr>
+                            <td class="text">{{ forloop.counter0|add:page_obj.start_index }}</td>
+                            <td class="text">{{ word.word }}</td>
+                            <td>
+                                <ul id='definitions'>
+                                    {% for definition in word.definitions %}
+                                        <li class="text">{{ definition }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    {% for translation in word.translations %}
+                                        <li class="text red">{{ translation }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </td>
+                            <td>
+                                <a href="{% url 'delete_word' word.id %}">
+                                    <button type="button" class="btn-grad">Delete</button>
+                                </a>
+                                <a href="{% url 'custom_word' word.id %}">
+                                    <button type="button" class="btn-grad">Custom</button>
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+    
+            <div class="pagination">
+                <span class="step-links">
+                    {% if page_obj.has_previous %}
+                        <a href="?page=1">&laquo; first</a>
+                        <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                    {% endif %}
+    
+                    <span class="current">
+                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                    </span>
+    
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}&sort={{ sort_by }}">next</a>
+                        <a href="?page={{ page_obj.paginator.num_pages }}&sort={{ sort_by }}">last &raquo;</a>
+                    {% endif %}
+                </span>
+            </div>
+        {% else %}
+            <h3>There are no words to display.</h3>
+        {% endif %}
+    </main>
+
+    <footer>
+        <p>This site is using DictionaryAPI as definitions sources.</p>
+        <p>This site is using Jisho.org as translations sources.</p>
+    </footer>
+    <script src="{% static 'js/proc.js' %}"></script>
+
+</body>

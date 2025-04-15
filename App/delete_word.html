@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete words</title>
+    <link rel='stylesheet' href='{% static "css/delete.css" %}'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2451784812620510"
+     crossorigin="anonymous"></script>
+     <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9TD5W9M3LF"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9TD5W9M3LF');
+    </script>
+</head>
+<body> 
+    <h2 class='font'>Are you sure you want to delete "{{ word.word }}"?</h2>
+    <form method="post" class='font form'>
+        {% csrf_token %}
+        <button type="submit" class='btn'>Confirm Delete</button>
+        <div class='box'>
+            <a href="{% url 'flash_defs' word.flash_name.id %}" class='href'>Cancel</a>
+        </div>
+    </form>
+</body>
+</html>

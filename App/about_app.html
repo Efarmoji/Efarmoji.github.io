@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="{% static 'css/aboutme.css' %}">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2451784812620510"
+    crossorigin="anonymous"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9TD5W9M3LF"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9TD5W9M3LF');
+    </script>
+</head>
+<body>
+    <header>
+        <div class='href-box'>
+            <a href="{% url 'home' %}">Back to home</a>
+        </div>
+    </hearder>
+    <main>        
+        <h1 class='main-h1'>アプリの機能</h1>
+        <div class='main-text'>
+            <ul>
+                <li>複数の単語帳の作成</li>
+                <li>単語の定義（英文）と日本語訳の自動追加</li>
+                <li>追加された定義と訳をカスタム追加</li>
+                <li>作成した単語帳を書式化、プリンターでコピー</li>
+            </ul>
+            <p></p>
+        </div>
+
+
+
+        <h1 class='main-h1'>アプリ情報</h1>
+        <div class='main-text'>
+            <p>このアプリケーションは個人で開発されたものです。専用のXアカウントでアップデート情報などを掲載、またユーザーの要望等を受け取るフォームのように使用する予定なので、アップデート情報のみならず機能の追加、お問い合わせ等ある方は、Xアカウントのほうでお願いします。</p>
+            <p>また、開発者が利用して役に立った教材などを'Textbook'にて紹介しています。ログインした後に現れる右上のボタンをクリックすると見ることができます。アフィリエイトによりこのサイトの運営資金になりますので、興味のある方は是非ご購入ください。</p>
+        </div>
+
+
+
+        <h1 class='main-h1'>アプリの使い方</h1>
+        <div class='main-text'>
+            <h3>①サインイン、ログイン</h3>
+            <h3>②単語帳の追加</h3>
+            <h3>③単語の追加</h3>
+            <h3>④追加した単語帳を書式化</h3>
+            <h3>⑤コピー機を使い紙にコピー</h3>
+            <h3></h3>
+            <h3></h3>
+
+        </div>
+
+
+
+        <h1 class='main-h1'>今後のアプリについて</h1>
+        <div class='main-text'>
+            <p>Xアカウントを通して、ユーザーによる要望が多かった機能を追加します。また、サイトによる収益が見込めるようになった場合、ネイティブによる英作文の添削サービスを開始する予定です。このサイトはスマホ用のアプリにもする予定なので、ぜひご支援よろしくお願いします。</p>
+            <h4>このアプリの最終目標は、これ一つで言語学習のすべてが可能になるというものです。アプリの発展につれ、対応言語をさらに展開していくつもりです。</h4>
+            <h1>バージョン情報</h1>
+            <p>現在のバージョン: ver1.0</p>
+            <ul>
+                <li>語彙（継続）</li>
+                <p>現在の機能を拡張します</p>
+                <li>ライティング（未実装、日程不定）</li>
+                <p>ネイティブと連携して低価格で添削するサービスを提供予定。また、添削結果をアルゴリズムに反映し、自動的に添削してくれるAIを作成予定</p>
+                <li>リーディング（未実装、日程不定）</li>
+                <p>上記同様、IELTS,英検等のテスト対策様に、リーディング用のテキストをオリジナル公開予定</p>
+            </ul>
+        </div>
+    </main>
+
+</body>
+</html>
