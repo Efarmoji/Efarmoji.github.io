@@ -1,10 +1,10 @@
-#Efarmoji
+# Efarmoji
 Visit : https://www.efarmoji.com/
 ## App directory
 ## static directory
 Note: This repository contains only the frontend (HTML/CSS/JS) part of the application. For security reasons, backend logic and source code are not included. You’re welcome to try the live app via the link above.
 
-##About
+## About
 Efarmoji is a web application built for English learners in Japan to collect, manage, and translate vocabulary using a flashcard-style interface. It’s powered by Python (Django) and BeautifulSoup for automation and scraping.
 
 ## Features
@@ -19,6 +19,11 @@ Efarmoji is a web application built for English learners in Japan to collect, ma
 - Backend: Python (Django) (Not included)
 - Data Collection: BeautifulSoup
 - Deployment: Heroku
+
+
+# Scrape
+
+
 
 ## Author
 Built by Efarmoji
