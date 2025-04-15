@@ -8,11 +8,11 @@ Note: This repository contains only the frontend (HTML/CSS/JS) part of the appli
 Efarmoji is a web application built for English learners in Japan to collect, manage, and translate vocabulary using a flashcard-style interface. It’s powered by Python (Django) and BeautifulSoup for automation and scraping.
 
 ## Features
-🔍 Web scraping from public language learning sites
-💬 Sentence translation via automated scraping
-📚 Flashcard management system
-📝 User-authenticated vocabulary saving
-🖨️ Export for physical flashcards
+ - 🔍 Web scraping from public language learning sites
+ - 💬 Sentence translation via automated scraping
+ - 📚 Flashcard management system
+ - 📝 User-authenticated vocabulary saving
+ - 🖨️ Export for physical flashcards
   
 ## Tech Stack
 - Frontend: HTML, CSS, JavaScript
