@@ -24,9 +24,18 @@ Efarmoji is a web application built for English learners in Japan to collect, ma
 # Scraping codes
 ## Scrape directory
 ## About
-This directory contains practice and implementation of scraping. 
+This directory contains various web scraping practice projects and implementations.
+
 
 ## Features
+### price_finder folder
+Compares the prices of a specific product on Amazon and Rakuten, then outputs the better deal.
+### quotes_scraper
+Scrapes famous quotes based on the author's name.
+### vocab_scraper
+Scrapes Russian sentences from a language-learning site and creates flashcards based on the words that appear in them. Already-known words are excluded to focus on new vocabulary.
+### wiki_scraper
+Scrapes the title and first paragraph from a Wikipedia page. A simple and clean example for beginners.
 
 ## Author
 Built by Efarmoji
